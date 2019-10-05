@@ -1,0 +1,41 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: My first serverless application.
+
+Resources:
+
+  GetToken:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: getToken.getToken
+      Runtime: nodejs8.10
+      Events:
+        authToken:
+          Type: Api
+          Properties:
+            Path: /getToken
+            Method: any
+
+  GetPatientInformation:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: getPatientInformation.getPatientInformation
+      Runtime: nodejs8.10
+      Events:
+        authToken:
+          Type: Api
+          Properties:
+            Path: /getPatientInformation
+            Method: any
+
+  UploadFile:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: uploadFile.uploadFile
+      Runtime: nodejs8.10
+      Events:
+        authToken:
+          Type: Api
+          Properties:
+            Path: /uploadFile
+            Method: any
