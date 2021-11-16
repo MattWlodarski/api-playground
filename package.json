@@ -4,7 +4,7 @@
   "description": "testing environment for api",
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "^2.542.0",
+    "aws-sdk": "^2.814.0",
     "base64topdf": "^1.1.8",
     "jspdf": "^1.5.3",
     "pdfjs": "^2.3.1",
